@@ -1,0 +1,54 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/png">
+    <title>404 - Page Not Found</title>
+
+    <!-- Bootstrap & Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <style>
+        .full-height-center {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 404 Centered Content -->
+<section class="full-height-center text-center">
+    <div class="container">
+        <h1 class="display-1" style="color:#f3c300;">404</h1>
+        <h3 class="mt-4 mb-3" style="color:#333;">Oops! Page Not Found</h3>
+        <p class="mb-4">The page you're looking for doesn't exist or has been moved.</p>
+        <a href="{% url 'index' %}" class="btn btn-warning" style="color: #fff;">Go Back Home</a>
+    </div>
+</section>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'js/mail-script.js' %}"></script>
+<script src="{% static 'vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'vendors/nice-select/js/jquery.nice-select.js' %}"></script>
+<script src="{% static 'js/stellar.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Add Room Price</h4>
+          <form class="forms-sample" method="POST"> 
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="room_type">Room Type</label>
+              <select class="form-control" id="room_type" name="room_type" required>
+                <option value="">Select Room Type</option>
+                <option value="Deluxe">Deluxe Room</option>
+                <option value="Suite">Suite Room</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="price_per_night">Price Per Night</label>
+              <input type="number" class="form-control" id="price_per_night" name="price_per_night" placeholder="Price Per Night" required>
+            </div>
+
+            <div class="form-group">
+              <label for="offer_price">Offer Price</label>
+              <input type="number" class="form-control" id="offer_price" name="offer_price" placeholder="Offer Price (optional)">
+            </div>
+
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+          </form> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if deluxe_price or suite_price %}
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+      <h5>Current Room Prices:</h5>
+      <ul class="list-group">
+        {% if deluxe_price %}
+          <li class="list-group-item">Deluxe Room - ₹{{ deluxe_price.price_per_night }} (Offer: ₹{{ deluxe_price.offer_price|default:"N/A" }})</li>
+        {% endif %}
+        {% if suite_price %}
+          <li class="list-group-item">Suite Room - ₹{{ suite_price.price_per_night }} (Offer: ₹{{ suite_price.offer_price|default:"N/A" }})</li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

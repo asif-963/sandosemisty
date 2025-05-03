@@ -1,0 +1,457 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/png">
+        <title> Best Homestays in Vattavada  | Budget Cottages & Stays in Munnar – Sandose Misty Cottage </title>
+        <meta content="Experience one of the best homestays in Vattavada , Munnar with rooftop dining, jeep safaris, and scenic views. Budget-friendly cottages in Munnar for families, couples & nature lovers." name="description">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+        
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    </head>
+    <body>
+        <style>
+            /* Change active link color to yellow */
+.navbar-nav .nav-item.active .nav-link {
+    color: #f3c300 !important;
+}
+
+/* Change hover color to yellow */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #f3c300 !important;
+}
+
+/* Ensure dropdown menu items also change color */
+.navbar-nav .nav-item.submenu .dropdown-menu .nav-link:hover {
+    color: #f3c300 !important;
+}
+
+        </style>
+        <!--================Header Area =================-->
+        <header class="header_area" style="background-color: #fff;">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static 'image/Loggo.png' %}" style="height:110px" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                        
+                            <li class="nav-item"><a class="nav-link" href="{% url 'near_by_place' %}">Near By Place</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rooms</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'suite_room' %}">suite room</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'deluxe_room' %}">Deluxe Room</a></li>
+                          
+                                </ul>
+                            </li> 
+                            <li class="nav-item"><a class="nav-link" href="{% url 'our_gallery' %}">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'booking' %}">Booking</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div> 
+                </nav>
+            </div>
+        </header>
+        <!--================Header Area =================-->
+    
+        <!--================Banner Area =================-->
+        <section class="banner_area">
+            <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="booking_table d_flex align-items-center" 
+                             style="background: url('{% static 'image/abt1.jpg' %}') no-repeat  center/cover; object" 
+                             data-stellar-ratio="0.8" data-stellar-vertical-offset="0">
+                            <div class="container">
+                                <div class="banner_content text-left" style="margin-top: 110px;">
+                                    <h6>Escape the Ordinary</h6>
+                                    <h2>Experience Serenity at Sandose Misty Cottage</h2>
+                                    <p>Discover a peaceful getaway surrounded by misty landscapes and nature’s beauty.</p>
+                                    <a href="{% url 'booking' %}" class="btn theme_btn button_hover">Book Your Stay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="carousel-item">
+                        <div class="booking_table d_flex align-items-center" 
+                             style="background: url('{% static 'image/abt4.jpg' %}') no-repeat  center/cover;" 
+                             data-stellar-ratio="0.8" data-stellar-vertical-offset="0">
+                            <div class="container">
+                                <div class="banner_content text-left" style="margin-top: 110px;">
+                                    <h6>Reconnect with Nature</h6>
+                                    <h2>A Perfect Mountain Escape</h2>
+                                    <p>Immerse yourself in tranquility and breathtaking views at Sandose Misty Cottage.</p>
+                                    <a href="{% url 'about' %}" class="btn theme_btn button_hover">Explore More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="carousel-item">
+                        <div class="booking_table d_flex align-items-center" 
+                             style="background: url('{% static 'image/abt3.jpg' %}') no-repeat  center/cover;"  ob
+                             data-stellar-ratio="0.8" data-stellar-vertical-offset="0">
+                            <div class="container">
+                                <div class="banner_content text-left" style="margin-top: 110px;">
+                                    <h6>Luxury in the Wild</h6>
+                                    <h2>Unwind in a Cozy Retreat</h2>
+                                    <p>Enjoy comfort, delicious cuisine, and spectacular scenery in our tranquil haven.</p>
+                                    <a href="{% url 'near_by_place' %}" class="btn theme_btn button_hover">Discover More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#bannerCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </section>
+<style>
+    .booking_table {
+    position: relative;
+}
+
+.booking_table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity (higher = darker) */
+    z-index: 1;
+}
+
+/* Ensures text appears above the overlay */
+.booking_table .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about_features li {
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+.about_features i {
+    font-size: 20px;
+}
+
+
+</style>        
+        
+        
+        
+        <!--================Banner Area =================-->
+
+          <!--================ About Sandose Misty Area  =================-->
+<!--================ About Sandose Misty Section 1 =================-->
+<section class="about_history_area section_gap ">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Left -->
+            <div class="col-md-6">
+                <div class="about_content">
+                    <h2 class="title title_color">About Sandose Misty</h2>
+                    <p>
+                        Sandose Misty is a forward-thinking organization focused on delivering impactful solutions in the fields of healthcare, education, and sustainable innovation.
+                        With a deep commitment to quality and community well-being, we work relentlessly to empower individuals and uplift communities.
+                        Our journey is driven by a passion for excellence, integrity in every action, and a vision to create lasting change in society through responsible leadership and purpose-led initiatives.
+                    </p>
+                    <a href="{% url 'about' %}" class="btn theme_btn button_hover mt-3">Learn More</a>
+                </div>
+            </div>
+            <!-- Image Right -->
+            <div class="col-md-6 text-center">
+                <img class="img-fluid rounded shadow" src="{% static 'image/abt2.jpg' %}" alt="About Sandose Misty">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!--================ End About Sandose Misty Area  =================-->
+
+
+
+
+
+  <!--================ Sandose Misty Facilities Area  =================-->
+<section class="facilities_area section_gap">
+    <div class="overlay bg-parallax" style="background: url('{% static 'image/3.jpg' %}') no-repeat center center/cover; opacity: 0.5;" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+    </div>
+    <div class="container">
+        <div class="section_title text-center">
+            <h2 class="title_w">Sandose Misty Facilities</h2>
+            <!-- <!-- <p>Enjoy a relaxing stay with 24/7 hot water facilities for your comfort.</p> --> -->
+        </div>
+        <div class="row mb_30">
+            <div class="col-lg-4 col-md-6">
+                <div class="facilities_item">
+                    <h4 class="sec_h4"><i class="lnr lnr-drop"></i> Hot Water</h4>
+                    <p>Enjoy a relaxing stay with 24/7 hot water facilities for your comfort.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="facilities_item">
+                    <h4 class="sec_h4"><i class="lnr lnr-car"></i> Jeep Safari</h4>
+                    <p>Explore the wild beauty of nature with our thrilling Jeep Safari tours.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="facilities_item">
+                    <h4 class="sec_h4"><i class="lnr lnr-map"></i> Trekking</h4>
+                    <p>Experience breathtaking trails and scenic mountain treks with expert guides.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="facilities_item">
+                    <h4 class="sec_h4"><i class="lnr lnr-store"></i> Roof Restaurant</h4>
+                    <p>Enjoy fine dining under the stars with our exclusive rooftop restaurant.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="facilities_item">
+                    <h4 class="sec_h4"><i class="lnr lnr-sun"></i> BBQ & Campfire</h4>
+
+                    <p>Unwind with a warm campfire and delicious BBQ nights with live music.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="facilities_item">
+                    <h4 class="sec_h4"><i class="lnr lnr-bus"></i> Parking</h4>
+                    <p>Spacious and secure parking facility available for all our guests.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End Sandose Misty Facilities Area  =================-->
+
+<!--================ Latest Blog Posts Area =================-->
+<section class="blog-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="title_color">Explore Sandose Misty & Nearby Wonders</h2>
+            <p class="text-muted">Discover breathtaking landscapes, hidden gems, and unforgettable experiences near Sandose Misty.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+
+            {% for place in places %}
+            
+            <div class="col-md-6">
+                <a href="{% url 'near_by_place' place.id %}" style="color: #fff" >
+                <div class="hover-card position-relative overflow-hidden rounded shadow-sm">
+                    <img src="{{ place.image.url }}" class="w-100 h-100 object-fit-cover" alt="{{ place.name }}">
+                    <div class="hover-content d-flex flex-column justify-content-end text-start p-4">
+                        <h5 class="text-white fw-bold">{{ place.name }}</h5>
+             
+                    
+
+                    </div>
+                </div>
+            </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .hover-card {
+        height: 300px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .hover-card img {
+        transition: transform 0.5s ease;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hover-card:hover img {
+        transform: scale(1.1);
+        filter: brightness(60%);
+    }
+
+    .hover-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.6);
+        transition: opacity 0.4s ease;
+    }
+
+    .hover-card:hover .hover-content {
+        opacity: 1;
+    }
+</style>
+<!--================ End of Blog Section =================-->
+
+        
+      
+      
+        
+      
+        <!--================ Testimonial Area =================-->
+        <section class="testimonial_area section_gap bg-light">
+            <div class="container">
+                <div class="section_title text-center mb-5">
+                    <h2 class="title_color">What Our Clients Say</h2>
+                    <p>Real stories from guests who found peace and comfort at Sandose Misty Cottage.</p>
+                </div>
+        
+                <div class="testimonial_slider owl-carousel">
+                    {% for review in testimonials %}
+                    <div class="testimonial_item p-4">
+                        <div class="d-flex align-items-start">
+                            {% if review.client_image %}
+                                <img class="rounded-circle me-4" src="{{ review.client_image.url }}" alt="{{ review.client_name }}" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                            {% else %}
+                                <img class="rounded-circle me-4" src="{% static 'image/default-profile.png' %}" alt="Default" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                            {% endif %}
+                            <div class="media-body">
+                                <p class="mb-3">"{{ review.review }}"</p>
+                                <h4 class="sec_h4">{{ review.client_name }}</h4>
+                                <span class="text-muted">{{ review.designation }}</span>
+                                <div class="star mt-2">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star-half-o text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        
+
+        
+
+
+
+        <!--================ start footer Area  =================-->	
+        <footer class="footer-area section_gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Sandose Misty</h6>
+                            <p>Sandose Misty is dedicated to bringing you the essence of tranquility, blending nature's best into our handcrafted products for ultimate relaxation.</p>
+                       </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Navigation Links</h6>
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="list_style">
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="{% url 'near_by_place' %}">Near By Place</a></li>
+                                  
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="list_style">
+                                        <li><a href="{% url 'suite_room' %}">Suite room</a></li>
+                                        <li><a href="{% url 'deluxe_room' %}">Deluxe Room</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    </ul>
+                                </div>										
+                            </div>							
+                        </div>
+                    </div>							
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Contact Details</h6>    
+                            <ul class="list_style">
+                                <li><i class="fa fa-map-marker"></i> 123, Sandose Mist Avenue, City Name</li>
+                                <li><i class="fa fa-phone"></i> 9496117669</li>
+                                <li><i class="fa fa-envelope"></i> sandosemisty@gmail.com</li>
+                                <!-- <li><i class="fa fa-globe"></i> www.sandosemist.com</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    				
+                </div>
+                <div class="border_line"></div>
+                <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                    <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved   by <a href="https://vynzora.com" target="_blank">VynZora</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    <div class="col-lg-4 col-sm-12 footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><strong style="font-size: 20px;">X</strong></a>
+
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+		<!--================ End footer Area  =================-->
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'js/popper.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'js/mail-script.js' %}"></script>
+        <script src="{% static 'vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js' %}"></script>
+        <script src="{% static 'vendors/nice-select/js/jquery.nice-select.js' %}"></script>
+        <script src="j{% static 's/mail-script.js' %}"></script>
+        <script src="{% static 'js/stellar.js' %}"></script>
+        <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>
